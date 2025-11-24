@@ -8,7 +8,7 @@ public class scrPlayerMovement : MonoBehaviour
     public Camera playerCamera;
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
-    public float jumpPower = 7f;
+    public float jumpPower = 0f;
     public float gravity = 10f;
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
@@ -54,7 +54,7 @@ public class scrPlayerMovement : MonoBehaviour
             moveDirection.y -= gravity * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.LeftControl) && canMove)
+        if (Input.GetKey(KeyCode.C) && canMove)
         {
             characterController.height = crouchHeight;
             walkSpeed = crouchSpeed;
