@@ -62,7 +62,7 @@ public class scrPlayerMovement : MonoBehaviour
         else
         {
             characterController.height = defaultHeight;
-            speed = 6f;
+            speed = 3f;
         }
 
         characterController.Move(moveDirection * Time.deltaTime);
