@@ -6,8 +6,7 @@ using UnityEngine;
 public class scrPlayerMovement : MonoBehaviour
 {
     public Camera playerCamera;
-    public float walkSpeed = 6f;
-    public float runSpeed = 12f;
+    public float speed = 3f;
     public float jumpPower = 0f;
     public float gravity = 10f;
     public float lookSpeed = 2f;
@@ -35,8 +34,8 @@ public class scrPlayerMovement : MonoBehaviour
         Vector3 right = transform.TransformDirection(Vector3.right);
 
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
+        float curSpeedX = canMove ? (isRunning ? speed : speed) * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = canMove ? (isRunning ? speed : speed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
@@ -57,15 +56,13 @@ public class scrPlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.C) && canMove)
         {
             characterController.height = crouchHeight;
-            walkSpeed = crouchSpeed;
-            runSpeed = crouchSpeed;
+            speed = crouchSpeed;
 
         }
         else
         {
             characterController.height = defaultHeight;
-            walkSpeed = 6f;
-            runSpeed = 12f;
+            speed = 6f;
         }
 
         characterController.Move(moveDirection * Time.deltaTime);
