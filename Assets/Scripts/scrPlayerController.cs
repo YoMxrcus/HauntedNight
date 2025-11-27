@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using JetBrains.Annotations;
 using System.Collections;
+using NUnit.Framework;
 
 public class scrPlayerController : MonoBehaviour
 {
@@ -20,11 +21,14 @@ public class scrPlayerController : MonoBehaviour
 
     //Backpack Variables
     public GameObject backpackBTN;
-    public GameObject testOBJ;
+    public GameObject testOBJ, testCube;
+    public GameObject inventoryPAN;
+
 
     //Pickup Variables
-    GameObject testPickup;
-    GameObject player;
+    public Transform playerCameraTransform;
+    bool hasTest;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -57,6 +61,37 @@ public class scrPlayerController : MonoBehaviour
         {
             stamina += 0.1f;
             UpdateData();
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            inventoryPAN.SetActive(true);
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            inventoryPAN.SetActive(false);
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+    public void Equipped()
+    { 
+        inventoryPAN.SetActive(false);
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        if (testOBJ & !hasTest)
+        {
+            GameObject testObject = Instantiate(testCube);
+            testObject.transform.parent = playerCameraTransform;
+            testObject.transform.localPosition = new Vector3(.5f, -.25f, .75f);
+            testObject.transform.localScale = new Vector3(.25f, .25f, .25f);
+            testObject.transform.localRotation = Quaternion.identity;
+            hasTest = true;
         }
     }
     void UpdateData()
