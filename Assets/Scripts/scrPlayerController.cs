@@ -4,6 +4,7 @@ using TMPro;
 using JetBrains.Annotations;
 using System.Collections;
 using NUnit.Framework;
+using Unity.VisualScripting;
 
 public class scrPlayerController : MonoBehaviour
 {
@@ -20,14 +21,17 @@ public class scrPlayerController : MonoBehaviour
     public AudioClip sprintSound;
 
     //Backpack Variables
-    public GameObject backpackBTN;
-    public GameObject testOBJ, testCube;
+    public GameObject rosaryPNG, rosary;
+    public GameObject flashlightPNG, flashlight;
+    public GameObject battery;
+    public GameObject batteryBar;
+    float batteryAmount = 100;
+    public GameObject keyPNG, key;
     public GameObject inventoryPAN;
-
 
     //Pickup Variables
     public Transform playerCameraTransform;
-    bool hasTest;
+    private GameObject currentEquippedItem = null; 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -72,27 +76,40 @@ public class scrPlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            inventoryPAN.SetActive(false);
-            Time.timeScale = 1;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            ExitInventory();
         }
     }
-    public void Equipped()
-    { 
+    public void EquipFlashlight()
+    {
+        ExitInventory();
+        PickUpHandler(flashlight, new Vector3(4.5f, 4.5f, 4.5f), Quaternion.Euler(90f, 90f, 90f));
+    }
+    public void EquipKey()
+    {
+        ExitInventory();
+        PickUpHandler(key, new Vector3(4.5f, 4.5f, 4.5f), Quaternion.Euler(90f, 0f, 90f));
+    }
+    void PickUpHandler(GameObject pickup, Vector3 scale, Quaternion rotation)
+    {
+        if (currentEquippedItem != null)
+        {
+            Destroy(currentEquippedItem);
+            currentEquippedItem = null;
+        }
+        GameObject newPickup = Instantiate(pickup);
+        currentEquippedItem = newPickup;
+
+        newPickup.transform.parent = playerCameraTransform;
+        newPickup.transform.localPosition = new Vector3(.5f, -.25f, .75f);
+        newPickup.transform.localScale = scale;
+        newPickup.transform.localRotation = rotation;
+    }
+    void ExitInventory()
+    {
         inventoryPAN.SetActive(false);
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        if (testOBJ & !hasTest)
-        {
-            GameObject testObject = Instantiate(testCube);
-            testObject.transform.parent = playerCameraTransform;
-            testObject.transform.localPosition = new Vector3(.5f, -.25f, .75f);
-            testObject.transform.localScale = new Vector3(.25f, .25f, .25f);
-            testObject.transform.localRotation = Quaternion.identity;
-            hasTest = true;
-        }
     }
     void UpdateData()
     {
@@ -107,11 +124,22 @@ public class scrPlayerController : MonoBehaviour
                 health -= 10;
                 UpdateData();
                 break;
-
-            case "pickup":
-                testOBJ.SetActive(true);
+            case "rosary":
+                rosaryPNG.SetActive(true);
                 Destroy(other.gameObject);
                 break;
+            case "flashlight":
+                flashlightPNG.SetActive(true);
+                Destroy(other.gameObject);
+                break;
+            case "key":
+                keyPNG.SetActive(true);
+                Destroy(other.gameObject);
+                break;
+            case "battery":
+                Destroy(other.gameObject);
+                break;
+
 
         }
 
