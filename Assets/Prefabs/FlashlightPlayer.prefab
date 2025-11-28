@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2867551406866955483
+--- !u!1 &7221906628444480135
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5561672788230398373}
-  - component: {fileID: 7560260549301163531}
-  - component: {fileID: 6330836031885477443}
+  - component: {fileID: 4974052208839103403}
+  - component: {fileID: 8422596502987057700}
+  - component: {fileID: 8689087111553881410}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Light Bulb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5561672788230398373
+  m_IsActive: 0
+--- !u!4 &4974052208839103403
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2867551406866955483}
+  m_GameObject: {fileID: 7221906628444480135}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.1739, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.0366, z: 0.0019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2275143098151428999}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &7560260549301163531
+  m_Father: {fileID: 4711173093088318755}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!108 &8422596502987057700
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2867551406866955483}
+  m_GameObject: {fileID: 7221906628444480135}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 2
+  m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.25
-  m_Range: 1
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 5
+  m_Range: 50
+  m_SpotAngle: 63.148186
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -83,7 +83,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -98,13 +98,13 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!114 &6330836031885477443
+--- !u!114 &8689087111553881410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2867551406866955483}
+  m_GameObject: {fileID: 7221906628444480135}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1001 &1736234321246815340
+--- !u!1001 &5110401999478010568
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -143,15 +143,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.037
+      value: -1.9941535
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.713
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.734
+      value: 0.345
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
       propertyPath: m_LocalRotation.w
@@ -187,7 +187,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6f67027a6014dd74cb5136f2cef4109b, type: 2}
     - target: {fileID: 919132149155446097, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
       propertyPath: m_Name
-      value: FlashlightPickPlayer
+      value: FlashlightPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
       propertyPath: m_TagString
@@ -198,11 +198,34 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5561672788230398373}
-    m_AddedComponents: []
+      addedObject: {fileID: 4974052208839103403}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5927545323128855581}
   m_SourcePrefab: {fileID: 100100000, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
---- !u!4 &2275143098151428999 stripped
+--- !u!4 &4711173093088318755 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
-  m_PrefabInstance: {fileID: 1736234321246815340}
+  m_PrefabInstance: {fileID: 5110401999478010568}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5344262420533088153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d4e4815af19084d49bed9e20f241e654, type: 3}
+  m_PrefabInstance: {fileID: 5110401999478010568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5927545323128855581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344262420533088153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1f1cff462610d41a1d75c8f4c38f6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryBar: {fileID: 0}
+  lightBulb: {fileID: 7221906628444480135}
+  batteryAmount: 100

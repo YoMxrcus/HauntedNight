@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using JetBrains.Annotations;
 using System.Collections;
 using NUnit.Framework;
 using Unity.VisualScripting;
@@ -23,16 +22,14 @@ public class scrPlayerController : MonoBehaviour
     //Backpack Variables
     public GameObject rosaryPNG, rosary;
     public GameObject flashlightPNG, flashlight;
-    public GameObject battery;
-    public GameObject batteryBar;
-    float batteryAmount = 100;
     public GameObject keyPNG, key;
     public GameObject inventoryPAN;
+    public GameObject battery;
 
     //Pickup Variables
     public Transform playerCameraTransform;
-    private GameObject currentEquippedItem = null; 
-
+    private GameObject currentEquippedItem = null;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,8 +43,8 @@ public class scrPlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) & stamina > 0)
         {
             GetComponent<scrPlayerMovement>().speed = 6;
-            stamina-= 0.3f;
-            UpdateData();          
+            stamina -= 0.3f;
+            UpdateData();
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -72,7 +69,6 @@ public class scrPlayerController : MonoBehaviour
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -111,7 +107,7 @@ public class scrPlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-    void UpdateData()
+    public void UpdateData()
     {
         staminaBar.value = stamina;
         healthBar.value = health;
