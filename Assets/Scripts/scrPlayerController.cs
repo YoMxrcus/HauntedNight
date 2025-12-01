@@ -30,6 +30,9 @@ public class scrPlayerController : MonoBehaviour
     //player objects
     public GameObject flashlightPlayer, keyPlayer;
 
+    // Battery
+    public float batteryAmount = 100;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -79,14 +82,25 @@ public class scrPlayerController : MonoBehaviour
         ExitInventory();
         keyPlayer.SetActive(false);
         flashlightPlayer.SetActive(true);
+        // Sets all images to false
+        foreach (Image image in GameObject.Find("BatteryBar").GetComponentsInChildren<Image>())
+        {
+            image.enabled = true;
+        }
     }
     public void EquipKey()
     {
         ExitInventory();
         flashlightPlayer.SetActive(false);
         keyPlayer.SetActive(true);
+        
+        // Sets all images to false
+        foreach (Image image in GameObject.Find("BatteryBar").GetComponentsInChildren<Image>())
+        {
+            image.enabled = false;
+        }
     }
-        void ExitInventory()
+    void ExitInventory()
     {
         inventoryPAN.SetActive(false);
         Time.timeScale = 1;
@@ -120,11 +134,11 @@ public class scrPlayerController : MonoBehaviour
                 break;
             case "battery":
                 Destroy(other.gameObject);
-                GetComponent<scrFlashlight>().AddBattery();
+                batteryAmount += 25;
 
                 if (UIManager.Instance != null)
                 {
-                    UIManager.Instance.UpdateFlashlightBattery(GetComponent<scrFlashlight>().batteryAmount);
+                    UIManager.Instance.UpdateFlashlightBattery(batteryAmount);
                 }
                 break;
 

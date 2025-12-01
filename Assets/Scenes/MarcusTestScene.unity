@@ -2072,7 +2072,7 @@ RectTransform:
   m_Father: {fileID: 696300186}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2315,7 +2315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1838021986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2773,6 +2773,7 @@ MonoBehaviour:
   battery: {fileID: 166268851}
   flashlightPlayer: {fileID: 1512628214}
   keyPlayer: {fileID: 595040192}
+  batteryAmount: 100
 --- !u!82 &2007665089
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3334,10 +3335,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightBulb: {fileID: 7221906629147390902}
-  batteryBar: {fileID: 0}
-  batteryAmount: 100
   sound: {fileID: 8435529662146995582}
   flashlightSound: {fileID: 8300000, guid: 37207e7e87b13964aaca5d2a215afdad, type: 3}
+  player: {fileID: 2007665088}
 --- !u!1001 &5952040904013499819
 PrefabInstance:
   m_ObjectHideFlags: 0
