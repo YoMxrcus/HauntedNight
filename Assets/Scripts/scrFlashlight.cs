@@ -14,10 +14,13 @@ public class scrFlashlight : MonoBehaviour
     bool isOn;
     public float batteryAmount = 100;
 
+    public AudioSource sound;
+    public AudioClip flashlightSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,9 +28,9 @@ public class scrFlashlight : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            sound.PlayOneShot(flashlightSound);
             if (isOn)
             {
-
                 lightBulb.SetActive(false);
                 isOn = false;
             }
@@ -50,5 +53,9 @@ public class scrFlashlight : MonoBehaviour
                 isOn = false;
             }
         }
+    }
+    public void AddBattery()
+    {
+        batteryAmount += 25;
     }
 }

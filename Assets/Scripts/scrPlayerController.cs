@@ -18,18 +18,17 @@ public class scrPlayerController : MonoBehaviour
     //Audio Variables
     public AudioSource sound;
     public AudioClip sprintSound;
+    public AudioClip flashlightSound;
 
     //Backpack Variables
     public GameObject rosaryPNG, rosary;
-    public GameObject flashlightPNG, flashlight;
-    public GameObject keyPNG, key;
+    public GameObject flashlightPNG;
+    public GameObject keyPNG;
     public GameObject inventoryPAN;
     public GameObject battery;
 
-    //Pickup Variables
-    public Transform playerCameraTransform;
-    private GameObject currentEquippedItem = null;
-    
+    //player objects
+    public GameObject flashlightPlayer, keyPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -78,29 +77,16 @@ public class scrPlayerController : MonoBehaviour
     public void EquipFlashlight()
     {
         ExitInventory();
-        PickUpHandler(flashlight, new Vector3(4.5f, 4.5f, 4.5f), Quaternion.Euler(90f, 90f, 90f));
+        keyPlayer.SetActive(false);
+        flashlightPlayer.SetActive(true);
     }
     public void EquipKey()
     {
         ExitInventory();
-        PickUpHandler(key, new Vector3(4.5f, 4.5f, 4.5f), Quaternion.Euler(90f, 0f, 90f));
+        flashlightPlayer.SetActive(false);
+        keyPlayer.SetActive(true);
     }
-    void PickUpHandler(GameObject pickup, Vector3 scale, Quaternion rotation)
-    {
-        if (currentEquippedItem != null)
-        {
-            Destroy(currentEquippedItem);
-            currentEquippedItem = null;
-        }
-        GameObject newPickup = Instantiate(pickup);
-        currentEquippedItem = newPickup;
-
-        newPickup.transform.parent = playerCameraTransform;
-        newPickup.transform.localPosition = new Vector3(.5f, -.25f, .75f);
-        newPickup.transform.localScale = scale;
-        newPickup.transform.localRotation = rotation;
-    }
-    void ExitInventory()
+        void ExitInventory()
     {
         inventoryPAN.SetActive(false);
         Time.timeScale = 1;
@@ -134,6 +120,12 @@ public class scrPlayerController : MonoBehaviour
                 break;
             case "battery":
                 Destroy(other.gameObject);
+                GetComponent<scrFlashlight>().AddBattery();
+
+                if (UIManager.Instance != null)
+                {
+                    UIManager.Instance.UpdateFlashlightBattery(GetComponent<scrFlashlight>().batteryAmount);
+                }
                 break;
 
 
