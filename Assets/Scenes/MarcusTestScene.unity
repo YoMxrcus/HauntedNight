@@ -2957,6 +2957,27 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2109793514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3844750264656081212, guid: 0ffd93e13e733d74385d5992a880ac21, type: 3}
+  m_PrefabInstance: {fileID: 2103935098776346219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &2109793515
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109793514}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 5ae62e9aaf8a38a408fe868b1fb59009, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &2127485912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,7 +3236,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3844750264656081212, guid: 0ffd93e13e733d74385d5992a880ac21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109793515}
   m_SourcePrefab: {fileID: 100100000, guid: 0ffd93e13e733d74385d5992a880ac21, type: 3}
 --- !u!4 &4974052208136716954
 Transform:
