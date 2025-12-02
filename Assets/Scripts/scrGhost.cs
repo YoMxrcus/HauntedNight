@@ -6,6 +6,8 @@ public class scrGhost : MonoBehaviour
     public float speed = 5f;
     void Start()
     {
+        Physics.IgnoreLayerCollision(6, 7);
+
         GameObject playerObject = GameObject.FindWithTag("Player");
 
         if (playerObject != null)
@@ -17,7 +19,9 @@ public class scrGhost : MonoBehaviour
     {
         if (target != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime); transform.LookAt(target);
+            //transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            //Vector3 playerlook = new Vector3(target.position.x, transform.position.y, target.position.z);
+            //transform.LookAt(playerlook);
         }
     }
     void OnTriggerStay(Collider other)
@@ -27,6 +31,9 @@ public class scrGhost : MonoBehaviour
             case "Player":
                 speed = 1;
                 transform.position = Vector3.MoveTowards(transform.position, other.transform.position, speed * Time.deltaTime);
+
+                Vector3 playerlook = new Vector3(target.position.x, transform.position.y, target.position.z);
+                transform.LookAt(playerlook);
                 break;
         }
     }
