@@ -1,9 +1,10 @@
+using NUnit.Framework;
+using System.Collections;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System.Collections;
-using NUnit.Framework;
-using Unity.VisualScripting;
+using static UnityEngine.GraphicsBuffer;
 
 public class scrPlayerController : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class scrPlayerController : MonoBehaviour
 
     // Battery
     public float batteryAmount = 100;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -142,8 +144,6 @@ public class scrPlayerController : MonoBehaviour
                 }
                 break;
 
-
         }
-
     }
 }
