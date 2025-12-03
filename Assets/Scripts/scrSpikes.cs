@@ -14,7 +14,7 @@ public class SpikeTrap : MonoBehaviour
             Debug.Log("Player touched spikes and died!");
 
             // Load the death scene (make sure it's added to Build Settings)
-            SceneManager.LoadScene("DeathScene");
+           // SceneManager.LoadScene("DeathScene");
         }
     }
 }
