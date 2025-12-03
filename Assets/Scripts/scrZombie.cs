@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class scrGhost : MonoBehaviour
+public class scrZombie : MonoBehaviour
 {
     public Transform target;
     public float speed = 5f;

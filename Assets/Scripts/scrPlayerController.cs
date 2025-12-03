@@ -50,7 +50,7 @@ public class scrPlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) & stamina > 0)
         {
             GetComponent<scrPlayerMovement>().speed = 6;
-            stamina -= 0.3f;
+            stamina -= 0.2f;
             UpdateData();
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -69,6 +69,10 @@ public class scrPlayerController : MonoBehaviour
         {
             stamina += 0.1f;
             UpdateData();
+        }
+        if (stamina < 5)
+        {
+            sound.Stop();
         }
         if (Input.GetKeyDown(KeyCode.Tab))
         {
