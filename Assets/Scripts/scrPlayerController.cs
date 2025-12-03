@@ -126,8 +126,8 @@ public class scrPlayerController : MonoBehaviour
         healthBar.value = health;
         if (health <= 0)
         {
-            panGameOver.SetActive(true);
-            PauseMenus();
+            Time.timeScale = 0;
+            SceneManager.LoadScene("GameOver");
         }
     }
     public void MainMenuBTN()

@@ -31,5 +31,19 @@ public class scrMainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void QuitBtn()
+    {
+        Application.Quit();
+    }
+    public void ReturnToMenuBtn()
+    {
+        SceneManager.LoadScene("MainMenu");
+
+    }
+    public void RetryBtn()
+    {
+        Debug.Log("Retrying Level");
+        Time.timeScale = 1;
+    }
     
 }
