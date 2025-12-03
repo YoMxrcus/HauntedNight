@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
 
 public class scrPlayerController : MonoBehaviour
@@ -22,11 +23,12 @@ public class scrPlayerController : MonoBehaviour
     public AudioClip flashlightSound;
 
     //Backpack Variables
-    public GameObject rosaryPNG, rosary;
     public GameObject flashlightPNG;
     public GameObject keyPNG;
     public GameObject inventoryPAN;
     public GameObject battery;
+
+    public GameObject panGameOver;
 
     //player objects
     public GameObject flashlightPlayer, keyPlayer;
@@ -38,6 +40,7 @@ public class scrPlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Time.timeScale = 1;
         sound = GetComponent<AudioSource>();
     }
 
@@ -47,7 +50,7 @@ public class scrPlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) & stamina > 0)
         {
             GetComponent<scrPlayerMovement>().speed = 6;
-            stamina -= 0.3f;
+            stamina -= 0.2f;
             UpdateData();
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -67,12 +70,14 @@ public class scrPlayerController : MonoBehaviour
             stamina += 0.1f;
             UpdateData();
         }
+        if (stamina < 5)
+        {
+            sound.Stop();
+        }
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             inventoryPAN.SetActive(true);
-            Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            PauseMenus();
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -102,6 +107,12 @@ public class scrPlayerController : MonoBehaviour
             image.enabled = false;
         }
     }
+    void PauseMenus()
+    {
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     void ExitInventory()
     {
         inventoryPAN.SetActive(false);
@@ -113,6 +124,20 @@ public class scrPlayerController : MonoBehaviour
     {
         staminaBar.value = stamina;
         healthBar.value = health;
+        if (health <= 0)
+        {
+            Time.timeScale = 0;
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+    public void MainMenuBTN()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void LevelReset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -121,10 +146,6 @@ public class scrPlayerController : MonoBehaviour
             case "enemy":
                 health -= 10;
                 UpdateData();
-                break;
-            case "rosary":
-                rosaryPNG.SetActive(true);
-                Destroy(other.gameObject);
                 break;
             case "flashlight":
                 flashlightPNG.SetActive(true);

@@ -3,8 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class scrMainMenu : MonoBehaviour
 {
-    public GameObject controlMenu;
-    public GameObject infoMenu;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,14 +31,19 @@ public class scrMainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
-    public void ControlBtn()
+    public void QuitBtn()
     {
-        controlMenu.SetActive(true);
-        infoMenu.SetActive(false);
+        Application.Quit();
     }
-    public void InfoBtn()
+    public void ReturnToMenuBtn()
     {
-        controlMenu.SetActive(false);
-        infoMenu.SetActive(true);
+        SceneManager.LoadScene("MainMenu");
+
     }
+    public void RetryBtn()
+    {
+        Debug.Log("Retrying Level");
+        Time.timeScale = 1;
+    }
+    
 }
