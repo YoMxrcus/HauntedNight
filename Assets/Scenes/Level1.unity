@@ -14234,7 +14234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &180677122
 Transform:
   m_ObjectHideFlags: 0
@@ -120384,7 +120384,7 @@ MonoBehaviour:
   sound: {fileID: 1267565869}
   sprint: {fileID: 1267565874}
   sprintSound: {fileID: 8300000, guid: f10414e16e81edd4dbfd85f82a3b3069, type: 3}
-  healthSound: {fileID: 0}
+  healthSound: {fileID: 8300000, guid: 3ca9e0fd11efc414bb0c7f6aa26ec7b5, type: 3}
   zombieAttackSound: {fileID: 8300000, guid: 6aa1645ab028a374c987890c998e5cac, type: 3}
   ghoulAttackSound: {fileID: 8300000, guid: 7260d030617fc294f96af06365185255, type: 3}
   coughSound: {fileID: 8300000, guid: fc9c57f734221384bab3acf5c32f5596, type: 3}
@@ -127907,6 +127907,10 @@ PrefabInstance:
     - target: {fileID: 5344262420533088153, guid: 701f0e3780a85ca40a37c97c64ad3ebb, type: 3}
       propertyPath: m_Name
       value: FlashlightPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026933949763216786, guid: 701f0e3780a85ca40a37c97c64ad3ebb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

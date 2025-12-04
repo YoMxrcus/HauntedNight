@@ -46,7 +46,7 @@ public class scrPlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GetComponent<scrMainMenu>().levels = 0;
+        //GetComponent<scrMainMenu>().levels = 0;
         Time.timeScale = 1;
         sound = GetComponent<AudioSource>();
     }
