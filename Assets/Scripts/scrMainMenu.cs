@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class scrMainMenu : MonoBehaviour
 {
-
+    public int levels;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,8 +42,26 @@ public class scrMainMenu : MonoBehaviour
     }
     public void RetryBtn()
     {
-        Debug.Log("Retrying Level");
+        if (levels == 0)
+        {
+            Debug.Log("Retrying Level 1");
+        }
+        if (levels == 1)
+        {
+            Debug.Log("Retrying Level 2");
+        }
         Time.timeScale = 1;
+    }
+    public void Continue() 
+    {
+        if(levels == 0)
+        {
+            SceneManager.LoadScene("Level1");
+        }
+        if (levels == 1) 
+        {
+            SceneManager.LoadScene("Level1");
+        }
     }
     
 }

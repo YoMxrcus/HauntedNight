@@ -67,9 +67,10 @@ public class scr : MonoBehaviour
     }
     public void SetFullScreen(bool isFullScreen)
     {
-        Screen.fullScreen = isFullScreen;
+        if (fullscreenToggle) Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+        else Screen.fullScreenMode = FullScreenMode.Windowed;
 
-        PlayerPrefs.SetInt("FullscreenPref", isFullScreen ? 1 : 0);
+            PlayerPrefs.SetInt("FullscreenPref", isFullScreen ? 1 : 0);
         PlayerPrefs.Save();
     }
     public void SetVolume(float sliderValue)
