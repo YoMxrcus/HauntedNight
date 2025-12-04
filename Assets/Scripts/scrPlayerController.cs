@@ -21,6 +21,7 @@ public class scrPlayerController : MonoBehaviour
     public AudioSource sound;
     public AudioSource sprint;
     public AudioClip sprintSound;
+    public AudioClip healthSound;
     public AudioClip zombieAttackSound;
     public AudioClip ghoulAttackSound;
     public AudioClip coughSound;
@@ -199,6 +200,7 @@ public class scrPlayerController : MonoBehaviour
                 {
                     health += 25;
                 }
+                sound.PlayOneShot(healthSound);
                 break;
             case "Smoke":
                 health -= 5;
