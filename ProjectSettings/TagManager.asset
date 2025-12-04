@@ -12,6 +12,8 @@ TagManager:
   - pickup
   - ghost
   - Win
+  - Spikes
+  - Smoke
   layers:
   - Default
   - TransparentFX
