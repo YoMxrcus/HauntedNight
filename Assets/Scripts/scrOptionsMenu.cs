@@ -42,14 +42,14 @@ public class scr : MonoBehaviour
 
         resolutionDropdown.onValueChanged.AddListener(SetResolution);
 
-        bool isFullscreen = (PlayerPrefs.GetInt("FullscreenPref", 1) == 1);
+        //bool isFullscreen = (PlayerPrefs.GetInt("FullscreenPref", 1) == 1);
 
-        Screen.fullScreen = isFullscreen;
+        /*Screen.fullScreen = isFullscreen;
 
         if (fullscreenToggle != null)
         {
             fullscreenToggle.isOn = Screen.fullScreen;
-        }
+        }*/
 
         float currentVolume;
         if (mixer.GetFloat(exposedParamName, out currentVolume))
@@ -70,7 +70,7 @@ public class scr : MonoBehaviour
         if (fullscreenToggle) Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
         else Screen.fullScreenMode = FullScreenMode.Windowed;
 
-            PlayerPrefs.SetInt("FullscreenPref", isFullScreen ? 1 : 0);
+        PlayerPrefs.SetInt("FullscreenPref", isFullScreen ? 1 : 0);
         PlayerPrefs.Save();
     }
     public void SetVolume(float sliderValue)
