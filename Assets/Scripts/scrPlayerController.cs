@@ -28,8 +28,6 @@ public class scrPlayerController : MonoBehaviour
     public GameObject inventoryPAN;
     public GameObject battery;
 
-    public GameObject panGameOver;
-
     //player objects
     public GameObject flashlightPlayer, keyPlayer;
 
@@ -100,7 +98,6 @@ public class scrPlayerController : MonoBehaviour
         ExitInventory();
         flashlightPlayer.SetActive(false);
         keyPlayer.SetActive(true);
-        
         // Sets all images to false
         foreach (Image image in GameObject.Find("BatteryBar").GetComponentsInChildren<Image>())
         {
