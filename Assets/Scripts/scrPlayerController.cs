@@ -203,6 +203,7 @@ public class scrPlayerController : MonoBehaviour
                     health += 25;
                 }
                 sound.PlayOneShot(healthSound);
+                UpdateData();
                 break;
             case "Smoke":
                 health -= 5;
