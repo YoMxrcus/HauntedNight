@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4618807495014788071}
   m_Layer: 0
   m_Name: Hitbox
-  m_TagString: enemy
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,15 +75,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30224f38479ba904ab808dd30a522309, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.6171
+      value: -91.793594
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30224f38479ba904ab808dd30a522309, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.012
+      value: 0.035983562
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30224f38479ba904ab808dd30a522309, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.8908
+      value: -70.69974
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30224f38479ba904ab808dd30a522309, type: 3}
       propertyPath: m_LocalRotation.w

@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 28912b8733bf5f84d94f19bd1c5fa495, type: 3}
       propertyPath: m_Name
-      value: Key
+      value: KeyPickUp
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 28912b8733bf5f84d94f19bd1c5fa495, type: 3}
       propertyPath: m_TagString
@@ -79,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28912b8733bf5f84d94f19bd1c5fa495, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3568611123670270539}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28912b8733bf5f84d94f19bd1c5fa495, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3600032183246807907}
   m_SourcePrefab: {fileID: 100100000, guid: 28912b8733bf5f84d94f19bd1c5fa495, type: 3}
 --- !u!1 &6798338099068553366 stripped
 GameObject:
@@ -106,3 +109,15 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.065
   m_Center: {x: 0.02, y: 0.03, z: 0}
+--- !u!114 &3600032183246807907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798338099068553366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83136dc17dfda41458d240d84674ef8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
