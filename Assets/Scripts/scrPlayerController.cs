@@ -20,13 +20,19 @@ public class scrPlayerController : MonoBehaviour
     //Audio Variables
     public AudioSource sound;
     public AudioClip sprintSound;
+    public AudioClip zombieAttackSound;
+    public AudioClip ghoulAttackSound;
+    public AudioClip coughSound;
     public AudioClip flashlightSound;
+    public AudioClip batteryPickup;
+    public AudioClip pickupSound;
 
     //Backpack Variables
     public GameObject flashlightPNG;
     public GameObject keyPNG;
     public GameObject inventoryPAN;
     public GameObject battery;
+    public GameObject pausePanel;
 
     //player objects
     public GameObject flashlightPlayer, keyPlayer;
@@ -136,12 +142,28 @@ public class scrPlayerController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
+    public void PauseBtn()
+    {
+        pausePanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void ResumeBtn()
+    {
+        pausePanel.SetActive(false);
+        Time.timeScale = 1;
+    }
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
         {
-            case "enemy":
+            case "Zombie":
                 health -= 10;
+                sound.PlayOneShot(zombieAttackSound);
+                UpdateData();
+                break;
+            case "Ghost":
+                health -= 10;
+                sound.PlayOneShot(ghoulAttackSound);
                 UpdateData();
                 break;
             case "flashlight":
@@ -150,11 +172,13 @@ public class scrPlayerController : MonoBehaviour
                 break;
             case "key":
                 keyPNG.SetActive(true);
+                sound.PlayOneShot(pickupSound);
                 Destroy(other.gameObject);
                 break;
             case "battery":
                 Destroy(other.gameObject);
                 batteryAmount += 25;
+                sound.PlayOneShot(batteryPickup);
 
                 if (UIManager.Instance != null)
                 {
@@ -165,9 +189,23 @@ public class scrPlayerController : MonoBehaviour
                 Time.timeScale = 0;
                 SceneManager.LoadScene("Win");
                 break;
-            case "Lose":
+            case "Spikes":
+                health -= 100;
                 UpdateData();
                 break;
+            case "Health":
+                if(health < 100)
+                {
+                    health += 25;
+                }
+                break;
+            case "Smoke":
+                health -= 5;
+                sound.PlayOneShot(coughSound);
+                UpdateData();
+                break;
+
+
 
         }
     }
