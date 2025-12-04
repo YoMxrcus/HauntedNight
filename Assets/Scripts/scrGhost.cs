@@ -4,6 +4,9 @@ public class scrGhost : MonoBehaviour
 {
     public Transform target;
     public float speed = 5f;
+
+    public AudioSource audioSource;
+    public AudioClip alertSound;
     void Start()
     {
         GameObject playerObject = GameObject.FindWithTag("Player");
@@ -24,6 +27,9 @@ public class scrGhost : MonoBehaviour
 
                 Vector3 playerlook = new Vector3(target.position.x, transform.position.y, target.position.z);
                 transform.LookAt(playerlook);
+
+                audioSource.PlayOneShot(alertSound);
+
                 break;
         }
     }
