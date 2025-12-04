@@ -11,6 +11,7 @@ TagManager:
   - rosary
   - pickup
   - ghost
+  - Win
   layers:
   - Default
   - TransparentFX

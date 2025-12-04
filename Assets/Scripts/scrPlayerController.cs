@@ -164,6 +164,13 @@ public class scrPlayerController : MonoBehaviour
                     UIManager.Instance.UpdateFlashlightBattery(batteryAmount);
                 }
                 break;
+            case "Win":
+                Time.timeScale = 0;
+                SceneManager.LoadScene("Win");
+                break;
+            case "Lose":
+                UpdateData();
+                break;
 
         }
     }

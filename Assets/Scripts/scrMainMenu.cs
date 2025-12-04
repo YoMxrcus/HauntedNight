@@ -62,6 +62,7 @@ public class scrMainMenu : MonoBehaviour
         {
             SceneManager.LoadScene("Level1");
         }
+        Time.timeScale = 1;
     }
     
 }
