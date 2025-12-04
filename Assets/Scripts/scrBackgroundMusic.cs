@@ -7,8 +7,8 @@ public class scrBackgroundMusic : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-        sound.Play();
+        sound.loop = true;
+        sound.PlayOneShot(backgroundMusic);
     }
 
     // Update is called once per frame
