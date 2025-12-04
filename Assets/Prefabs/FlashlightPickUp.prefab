@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8560966183923702406}
   - component: {fileID: 5848590605088173644}
   - component: {fileID: 574513088928549879}
+  - component: {fileID: 6850716592299491303}
   m_Layer: 0
   m_Name: FlashlightPickUp
   m_TagString: flashlight
@@ -111,6 +112,18 @@ CapsuleCollider:
   m_Height: 0.078232564
   m_Direction: 1
   m_Center: {x: 0.0021342246, y: 0.030381635, z: -0.0000000016434102}
+--- !u!114 &6850716592299491303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344262420533088153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83136dc17dfda41458d240d84674ef8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6026933949763216786
 GameObject:
   m_ObjectHideFlags: 0
