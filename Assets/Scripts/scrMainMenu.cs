@@ -66,5 +66,6 @@ public class scrMainMenu : MonoBehaviour
         }
         Time.timeScale = 1;
     }
-    
+
+
 }
