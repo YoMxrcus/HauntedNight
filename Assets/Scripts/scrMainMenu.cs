@@ -46,11 +46,11 @@ public class scrMainMenu : MonoBehaviour
     {
         if (levels == 0)
         {
-            Debug.Log("Retrying Level 1");
+            SceneManager.LoadScene("Level1");
         }
         if (levels == 1)
         {
-            Debug.Log("Retrying Level 2");
+            SceneManager.LoadScene("Level2");
         }
         Time.timeScale = 1;
     }

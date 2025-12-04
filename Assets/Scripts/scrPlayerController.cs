@@ -46,6 +46,7 @@ public class scrPlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        GetComponent<scrMainMenu>().levels = 0;
         Time.timeScale = 1;
         sound = GetComponent<AudioSource>();
     }
@@ -190,6 +191,7 @@ public class scrPlayerController : MonoBehaviour
             case "Win":
                 Time.timeScale = 0;
                 SceneManager.LoadScene("Win");
+                GetComponent<scrMainMenu>().levels ++;
                 break;
             case "Spikes":
                 health -= 100;
@@ -201,6 +203,7 @@ public class scrPlayerController : MonoBehaviour
                     health += 25;
                 }
                 sound.PlayOneShot(healthSound);
+                UpdateData();
                 break;
             case "Smoke":
                 health -= 5;
