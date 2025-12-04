@@ -19,6 +19,7 @@ public class scrPlayerController : MonoBehaviour
 
     //Audio Variables
     public AudioSource sound;
+    public AudioSource sprint;
     public AudioClip sprintSound;
     public AudioClip zombieAttackSound;
     public AudioClip ghoulAttackSound;
@@ -59,13 +60,13 @@ public class scrPlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            sound.clip = sprintSound;
-            sound.loop = true;
-            sound.Play();
+            sprint.clip = sprintSound;
+            sprint.loop = true;
+            sprint.Play();
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            sound.Stop();
+            sprint.Stop();
             GetComponent<scrPlayerMovement>().speed = 3;
             UpdateData();
         }
@@ -76,7 +77,7 @@ public class scrPlayerController : MonoBehaviour
         }
         if (stamina < 5)
         {
-            sound.Stop();
+            sprint.Stop();
         }
         if (Input.GetKeyDown(KeyCode.Tab))
         {
