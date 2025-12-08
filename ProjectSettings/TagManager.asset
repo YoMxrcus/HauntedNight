@@ -17,6 +17,7 @@ TagManager:
   - Ghost
   - Zombie
   - Health
+  - BreakableWall
   layers:
   - Default
   - TransparentFX
@@ -26,9 +27,9 @@ TagManager:
   - UI
   - Floor
   - Ghost
-  - obstacle
+  - Destructive
   - BLOCK
-  - 
+  - player
   - 
   - 
   - 
