@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BoulderController : MonoBehaviour
 {
-    
+
     public Transform player;          // Assign your player transform in Inspector
     private Rigidbody rb;
 
@@ -36,8 +36,6 @@ public class BoulderController : MonoBehaviour
         }
         else
         {
-            // Player escaped detection → kill instantly
-            KillPlayer();
             playerInRange = false;
         }
     }
@@ -71,24 +69,6 @@ public class BoulderController : MonoBehaviour
         if (collision.gameObject.CompareTag(wallTag))
         {
             Destroy(collision.gameObject);
-        }
-
-        // If the boulder collides with the player, kill them
-        if (collision.gameObject.CompareTag(playerTag))
-        {
-            KillPlayer();
-        }
-    }
-
-    void KillPlayer()
-    {
-        // Destroy player object (or trigger death logic)
-        if (player != null)
-        {
-            Destroy(player.gameObject);
-
-            // Optional: trigger respawn, game over, or animation here
-            Debug.Log("Player has been killed by the boulder!");
         }
     }
 }

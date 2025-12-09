@@ -164,6 +164,10 @@ public class scrPlayerController : MonoBehaviour
                 sound.PlayOneShot(zombieAttackSound);
                 UpdateData();
                 break;
+            case "RollingBall":
+                health -= 100;
+                UpdateData();
+                break;
             case "Ghost":
                 health -= 10;
                 sound.PlayOneShot(ghoulAttackSound);

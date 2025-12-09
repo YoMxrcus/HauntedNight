@@ -18,6 +18,7 @@ TagManager:
   - Zombie
   - Health
   - BreakableWall
+  - RollingBall
   layers:
   - Default
   - TransparentFX
