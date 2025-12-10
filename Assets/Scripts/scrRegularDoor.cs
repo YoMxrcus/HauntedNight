@@ -19,24 +19,18 @@ public class scrRegularDoor : MonoBehaviour
         inventoryPan = GameObject.Find("InventoryPan");
         keyPNG = GameObject.Find("keyPNG");
         keyPlayer = GameObject.Find("KeyPlayer");
-}
+        if (GameObject.Find("KeyPlayer"))
+        { hasKey = true;}
+    }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Safer way to check tags
-        {
-            // Check if references are assigned before using them
-                inventoryPan.SetActive(true);
-                keyPNG.SetActive(true);
-                hasKey = true;
-                if (hasKey)
-            {
-                Destroy(gameObject); // Destroys the door
-                inventoryPan.SetActive(false);
-                keyPNG.SetActive(false);
-                hasKey = false;
-                // if (inventoryPan != null)
-                //     inventoryPan.SetActive(false);
-            }
+        if (other.CompareTag("key")) // Safer way to check tags
+        {       
+            Destroy(gameObject); // Destroys the door
+            keyPlayer.SetActive(false);
+            inventoryPan.SetActive(true);
+            keyPNG.SetActive(false);
+            hasKey = false;
         }
     }
 }
