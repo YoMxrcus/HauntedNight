@@ -30,6 +30,7 @@ public class scrRegularDoor : MonoBehaviour
             keyPlayer.SetActive(false);
             inventoryPan.SetActive(true);
             keyPNG.SetActive(false);
+            inventoryPan.SetActive(false);
             hasKey = false;
         }
     }
