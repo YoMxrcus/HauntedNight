@@ -1125,8 +1125,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter the abandoned jungle temple running from ghost and zombies while
-    traversing the maze to uncover what secrets there are to unfold
+  m_text: Enter the tample looking for a key in the maze while avoiding zombies,
+    ghost's and other traps to get to the end of the maze
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
   m_sharedMaterial: {fileID: 6367951036065320985, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
@@ -1153,8 +1153,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.32
-  m_fontSizeBase: 7.32
+  m_fontSize: 6.6
+  m_fontSizeBase: 6.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1472,8 +1472,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter the abandoned jungle temple running from ghost and zombies while
-    traversing the maze to uncover what secrets there are to unfold
+  m_text: Enter the tample looking for a key in the maze while avoiding zombies,
+    ghost's and other traps to get to the end of the maze
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
   m_sharedMaterial: {fileID: 6367951036065320985, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
@@ -1500,8 +1500,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.32
-  m_fontSizeBase: 7.32
+  m_fontSize: 6.6
+  m_fontSizeBase: 6.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

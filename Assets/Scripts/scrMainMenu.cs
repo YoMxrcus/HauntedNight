@@ -29,9 +29,25 @@ public class scrMainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Options");
     }
+    public void Lvl1_OptionsBtn()
+    {
+        SceneManager.LoadScene("Options");
+    }
+    public void Lvl2_OptionsBtn()
+    {
+        SceneManager.LoadScene("Options");
+    }
     public void BackBtn()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    public void PauseBackBtn()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+    public void PauseBackBtn2()
+    {
+        SceneManager.LoadScene("Level2_cleaned");
     }
     public void QuitBtn()
     {
@@ -44,26 +60,17 @@ public class scrMainMenu : MonoBehaviour
     }
     public void RetryBtn()
     {
-        if (levels == 0)
-        {
-            SceneManager.LoadScene("Level1");
-        }
-        if (levels == 1)
-        {
-            SceneManager.LoadScene("Level2");
-        }
+        SceneManager.LoadScene("Level1");
+        Time.timeScale = 1;
+    }
+    public void Lvl2_RetryBtn()
+    {
+        SceneManager.LoadScene("Level2_cleaned");
         Time.timeScale = 1;
     }
     public void Continue() 
     {
-        if(levels == 0)
-        {
-            SceneManager.LoadScene("Level1");
-        }
-        if (levels == 1) 
-        {
-            SceneManager.LoadScene("Level1");
-        }
+        SceneManager.LoadScene("Level2_cleaned");
         Time.timeScale = 1;
     }
 

@@ -1896,8 +1896,6 @@ RectTransform:
   - {fileID: 674896946}
   - {fileID: 359730802}
   - {fileID: 1212457471}
-  - {fileID: 1713196091}
-  - {fileID: 1511898660}
   - {fileID: 930516277}
   m_Father: {fileID: 1528805572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2116,7 +2114,9 @@ RectTransform:
   - {fileID: 1486925094}
   - {fileID: 2012983213}
   - {fileID: 2004529002}
+  - {fileID: 1713196091}
   - {fileID: 259018921}
+  - {fileID: 1511898660}
   m_Father: {fileID: 1528805572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2434,14 +2434,14 @@ RectTransform:
   m_GameObject: {fileID: 1511898659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.179328, y: 1.4951131, z: 10.517943}
+  m_LocalScale: {x: 0.81437, y: 0.81437, z: 0.81437}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1182807269}
+  m_Father: {fileID: 1326531729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.144592, y: 38.776203}
+  m_AnchoredPosition: {x: -131.40001, y: 19.000051}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511898661
@@ -2772,14 +2772,14 @@ RectTransform:
   m_GameObject: {fileID: 1713196090}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.179328, y: 1.4951131, z: 10.517943}
+  m_LocalScale: {x: 0.81437, y: 0.81437, z: 0.81437}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1182807269}
+  m_Father: {fileID: 1326531729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.130539, y: 36.38942}
+  m_AnchoredPosition: {x: -132.9, y: 17.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713196092
@@ -3117,7 +3117,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 973832182}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.8133333
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3290,7 +3290,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1874580039}
         m_TargetAssemblyTypeName: scrMainMenu, Assembly-CSharp
-        m_MethodName: BackBtn
+        m_MethodName: PauseBackBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
