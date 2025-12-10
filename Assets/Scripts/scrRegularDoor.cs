@@ -28,9 +28,9 @@ public class scrRegularDoor : MonoBehaviour
         {       
             Destroy(gameObject); // Destroys the door
             keyPlayer.SetActive(false);
-            //inventoryPan.SetActive(true);
+            inventoryPan.SetActive(true);
             keyPNG.SetActive(false);
-            //inventoryPan.SetActive(false);
+            inventoryPan.SetActive(false);
             hasKey = false;
         }
     }
