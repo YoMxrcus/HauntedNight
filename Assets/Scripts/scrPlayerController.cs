@@ -9,6 +9,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public class scrPlayerController : MonoBehaviour
 {
+    public int level = 0;
+
     //Stamina Variables
     public float stamina = 100;
     public Slider staminaBar;
@@ -48,6 +50,7 @@ public class scrPlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        level = 0;
         //GetComponent<scrMainMenu>().levels = 0;
         Time.timeScale = 1;
         sound = GetComponent<AudioSource>();
@@ -233,8 +236,18 @@ public class scrPlayerController : MonoBehaviour
                 break;
             case "Win":
                 Time.timeScale = 0;
-                SceneManager.LoadScene("Win");
-                GetComponent<scrMainMenu>().levels ++;
+                if(level == 0)
+                {
+                    SceneManager.LoadScene("Win");
+                    level++;
+                }
+                if(level == 1)
+                {
+                    SceneManager.LoadScene("Lvl2WIn");
+
+                }
+
+
                 break;
             case "Spikes":
                 health -= 100;
