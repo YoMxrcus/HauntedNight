@@ -205,6 +205,7 @@ public class scrPlayerController : MonoBehaviour
                 if(health < 100)
                 {
                     health += 25;
+                   Destroy(other.gameObject);
                 }
                 sound.PlayOneShot(healthSound);
                 UpdateData();
