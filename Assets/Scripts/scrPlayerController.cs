@@ -12,10 +12,12 @@ public class scrPlayerController : MonoBehaviour
     //Stamina Variables
     public float stamina = 100;
     public Slider staminaBar;
+    public GameObject highEnergy, mediumEnergy, lowEnergy;
 
     //Health Variables
     public int health = 100;
     public Slider healthBar;
+    public GameObject highHealth, mediumHealth, lowHealth;
 
     //Audio Variables
     public AudioSource sound;
@@ -57,7 +59,7 @@ public class scrPlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) & stamina > 0)
         {
             GetComponent<scrPlayerMovement>().speed = 6;
-            stamina -= 0.2f;
+            stamina -= 0.1f;
             UpdateData();
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -74,7 +76,7 @@ public class scrPlayerController : MonoBehaviour
         }
         else if (stamina < 100f)
         {
-            stamina += 0.1f;
+            stamina += 0.05f;
             UpdateData();
         }
         if (stamina < 5)
@@ -134,6 +136,43 @@ public class scrPlayerController : MonoBehaviour
         {
             Time.timeScale = 0;
             SceneManager.LoadScene("GameOver");
+        }
+        if (health <= 100)
+        {
+            highHealth.SetActive(true);
+            mediumHealth.SetActive(false);
+            lowHealth.SetActive(false);
+        }
+        if (health <= 50)
+        {
+            mediumHealth.SetActive(true);
+            highHealth.SetActive(false);
+            lowHealth.SetActive(false);
+        }
+        if (health <= 25)
+        {
+            lowHealth.SetActive(true);
+            mediumHealth.SetActive(false);
+            highHealth.SetActive(false);
+        }
+
+        if (stamina <= 100)
+        {
+            highEnergy.SetActive(true);
+            mediumEnergy.SetActive(false);
+            lowEnergy.SetActive(false);
+        }
+        if (stamina <= 50)
+        {
+            mediumEnergy.SetActive(true);
+            highEnergy.SetActive(false);
+            lowEnergy.SetActive(false);
+        }
+        if (stamina <= 25)
+        {
+            lowEnergy.SetActive(true);
+            mediumEnergy.SetActive(false);
+            highEnergy.SetActive(false);
         }
     }
     public void MainMenuBTN()
