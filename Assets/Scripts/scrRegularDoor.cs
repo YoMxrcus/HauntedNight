@@ -16,7 +16,9 @@ public class scrRegularDoor : MonoBehaviour
     void Start()
     {
         if (keyPlayer != null)
-        { hasKey = true;}
+        { 
+            hasKey = true;
+        }
     }
     void OnTriggerEnter(Collider other)
     {
