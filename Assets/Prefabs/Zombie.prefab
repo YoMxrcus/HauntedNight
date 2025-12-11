@@ -263,9 +263,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 5
+  speed: 10
   audioSource: {fileID: -45115909783168140}
   screamSound: {fileID: 8300000, guid: 2fd0abe189a99134395a8f78fac8b911, type: 3}
+  stunDuration: 2
 --- !u!65 &5274574716733102973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -285,7 +286,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 1.24, z: 10}
+  m_Size: {x: 20, y: 1.24, z: 20}
   m_Center: {x: -0.1, y: 0.66, z: 0.23}
 --- !u!82 &-45115909783168140
 AudioSource:

@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 5
+  speed: 10
   audioSource: {fileID: 0}
   alertSound: {fileID: 8300000, guid: 88ccc6ecd6eab224fa03b130d6e49224, type: 3}
 --- !u!65 &2803994494283588475
@@ -373,7 +373,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 1.24, z: 10}
+  m_Size: {x: 20, y: 1.24, z: 20}
   m_Center: {x: 0, y: 0.91, z: 0}
 --- !u!82 &-8890795663133727851
 AudioSource:
