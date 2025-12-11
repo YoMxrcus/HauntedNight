@@ -837,7 +837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &559436366
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1704,7 +1704,10 @@ MonoBehaviour:
     C-crouch
 
 
-    F-Flashlight on/off'
+    F-Flashlight on/off
+
+
+    E-Open/Close Books'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
   m_sharedMaterial: {fileID: 6367951036065320985, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
@@ -1731,8 +1734,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6.08
-  m_fontSizeBase: 6.08
+  m_fontSize: 5.5
+  m_fontSizeBase: 5.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2662,7 +2665,10 @@ MonoBehaviour:
     C-crouch
 
 
-    F-Flashlight on/off'
+    F-Flashlight on/off
+
+
+    E-Open/Close Books'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
   m_sharedMaterial: {fileID: 6367951036065320985, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
@@ -2689,8 +2695,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6.08
-  m_fontSizeBase: 6.08
+  m_fontSize: 5.5
+  m_fontSizeBase: 5.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2982,7 +2988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1801246179
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3002,7 +3008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -659, y: -40}
+  m_AnchoredPosition: {x: -659, y: -24}
   m_SizeDelta: {x: 438.8914, y: 203.9378}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1801246180
