@@ -4,6 +4,7 @@ public class scrHelp : MonoBehaviour
 {
     public GameObject controlMenu;
     public GameObject infoMenu;
+    public GameObject creditsMenu;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,10 +20,18 @@ public class scrHelp : MonoBehaviour
     {
         controlMenu.SetActive(true);
         infoMenu.SetActive(false);
+        creditsMenu.SetActive(false);
     }
     public void InfoBtn()
     {
         controlMenu.SetActive(false);
         infoMenu.SetActive(true);
+        creditsMenu.SetActive(false);
+    }
+    public void CreditsBtn()
+    {
+        controlMenu.SetActive(false);
+        infoMenu.SetActive(false);
+        creditsMenu.SetActive(true);
     }
 }
