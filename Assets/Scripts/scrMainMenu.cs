@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 public class scrMainMenu : MonoBehaviour
 {
     public int levels;
+    public GameObject panTransition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        panTransition.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -20,10 +23,8 @@ public class scrMainMenu : MonoBehaviour
     }
     public void StartBtn()
     {
-
-        StartCoroutine(transition());
-        SceneManager.LoadScene("level1");
-
+        panTransition.SetActive(true);
+        Invoke("LoadLevelOne", 5);
 
     }
     public void HelpBtn()
@@ -48,10 +49,12 @@ public class scrMainMenu : MonoBehaviour
     }
     public void PauseBackBtn()
     {
+
         SceneManager.LoadScene("Level1");
     }
     public void PauseBackBtn2()
     {
+
         SceneManager.LoadScene("Level2_cleaned");
     }
     public void QuitBtn()
@@ -75,12 +78,22 @@ public class scrMainMenu : MonoBehaviour
     }
     public void Continue() 
     {
-        SceneManager.LoadScene("Level2_cleaned");
+        ToLevelTwo();
         Time.timeScale = 1;
     }
-     IEnumerator transition()
+    public void LoadLevelOne()
     {
-        SceneManager.LoadScene("transition");
-        yield return new WaitForSeconds(7);
+        Debug.Log("Load");
+        SceneManager.LoadScene("Level1");
+        Debug.Log("Loaded");
+    }
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+        public void ToLevelTwo()
+    {
+        panTransition.SetActive(true);
+        Invoke("LoadLevel2", 5);
     }
 }
