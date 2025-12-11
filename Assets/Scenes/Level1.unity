@@ -6348,6 +6348,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: doorway1
       objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 16b5b05435475dc4e8ed8a5eb5d2aceb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 16b5b05435475dc4e8ed8a5eb5d2aceb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 16b5b05435475dc4e8ed8a5eb5d2aceb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.48
+      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 16b5b05435475dc4e8ed8a5eb5d2aceb, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.29

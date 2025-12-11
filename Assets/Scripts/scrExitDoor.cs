@@ -30,8 +30,8 @@ public class scrExitDoor : MonoBehaviour
     public void WinScene()
     {
         if (currentSceneName == "Level1")
-        { SceneManager.LoadScene("GameOver"); }
+        { SceneManager.LoadScene("Win"); }
         if (currentSceneName == "Level2")
-        { SceneManager.LoadScene("GameOver2"); }
+        { SceneManager.LoadScene("Lvl2Win"); }
     }
 }
