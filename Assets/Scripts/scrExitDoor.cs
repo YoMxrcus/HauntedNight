@@ -4,14 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class scrExitDoor : MonoBehaviour
 {
-    public AudioSource sound;
-    public AudioClip exitSound;
     public bool hasKey = false;
+    string currentSceneName;
 
     private void Update()
     {
         if (GameObject.Find("KeyPlayer") != null)
         { hasKey = true; }
+        currentSceneName = SceneManager.GetActiveScene().name;
     }
     void OnTriggerEnter(Collider other)
     {
@@ -21,9 +21,7 @@ public class scrExitDoor : MonoBehaviour
                 {
                     if (hasKey)
                     {
-                        Invoke("WinScene", 1f);
-                        sound.PlayOneShot(exitSound);
-                        
+                        Invoke("WinScene", 1f);   
                     }
                 }
                 break;
@@ -31,6 +29,9 @@ public class scrExitDoor : MonoBehaviour
     }
     public void WinScene()
     {
-        SceneManager.LoadScene("Win");
+        if (currentSceneName == "Level1")
+        { SceneManager.LoadScene("GameOver"); }
+        if (currentSceneName == "Level2")
+        { SceneManager.LoadScene("GameOver2"); }
     }
 }

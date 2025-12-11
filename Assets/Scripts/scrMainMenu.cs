@@ -55,7 +55,7 @@ public class scrMainMenu : MonoBehaviour
     public void PauseBackBtn2()
     {
 
-        SceneManager.LoadScene("Level2_cleaned");
+        SceneManager.LoadScene("Level2");
     }
     public void QuitBtn()
     {
@@ -73,7 +73,7 @@ public class scrMainMenu : MonoBehaviour
     }
     public void Lvl2_RetryBtn()
     {
-        SceneManager.LoadScene("Level2_cleaned");
+        SceneManager.LoadScene("Level2");
         Time.timeScale = 1;
     }
     public void Continue() 

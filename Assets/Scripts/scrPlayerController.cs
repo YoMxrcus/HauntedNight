@@ -9,7 +9,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class scrPlayerController : MonoBehaviour
 {
-    public int level = 0;
+    string currentSceneName;
 
     //Stamina Variables
     public float stamina = 100;
@@ -50,10 +50,9 @@ public class scrPlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        level = 0;
-        //GetComponent<scrMainMenu>().levels = 0;
         Time.timeScale = 1;
         sound = GetComponent<AudioSource>();
+        currentSceneName = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -138,7 +137,11 @@ public class scrPlayerController : MonoBehaviour
         if (health <= 0)
         {
             Time.timeScale = 0;
-            SceneManager.LoadScene("GameOver");
+            if(currentSceneName == "Level1")
+            {SceneManager.LoadScene("GameOver");}
+            if(currentSceneName == "Level2")
+            {SceneManager.LoadScene("GameOver2");}
+            
         }
         if (health <= 100)
         {
@@ -234,21 +237,6 @@ public class scrPlayerController : MonoBehaviour
                     UIManager.Instance.UpdateFlashlightBattery(batteryAmount);
                 }
                 break;
-            case "Win":
-                Time.timeScale = 0;
-                if(level == 0)
-                {
-                    SceneManager.LoadScene("Win");
-                    level++;
-                }
-                if(level == 1)
-                {
-                    SceneManager.LoadScene("Lvl2WIn");
-
-                }
-
-
-                break;
             case "Spikes":
                 health -= 100;
                 UpdateData();
@@ -256,9 +244,9 @@ public class scrPlayerController : MonoBehaviour
             case "Health":
                 if(health < 100)
                 {
-                    health += 25;
-                   Destroy(other.gameObject);
+                   health += 25;
                 }
+                Destroy(other.gameObject);
                 sound.PlayOneShot(healthSound);
                 UpdateData();
                 break;

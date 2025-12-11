@@ -15,7 +15,7 @@ public class scrBolderDrop : MonoBehaviour
             case "Player":
 
                 {
-                    Invoke("SpawnBolder", 3);
+                    Invoke("SpawnBolder", 1);
                 }
                 break;
         }
