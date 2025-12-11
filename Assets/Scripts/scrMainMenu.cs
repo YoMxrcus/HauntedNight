@@ -12,7 +12,7 @@ public class scrMainMenu : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        panTransition.SetActive(false);
+        //panTransition.SetActive(false);
 
     }
 
