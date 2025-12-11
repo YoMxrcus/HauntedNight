@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +20,11 @@ public class scrMainMenu : MonoBehaviour
     }
     public void StartBtn()
     {
-        SceneManager.LoadScene("Level1");
+
+        StartCoroutine(transition());
+        SceneManager.LoadScene("level1");
+
+
     }
     public void HelpBtn()
     {
@@ -73,6 +78,9 @@ public class scrMainMenu : MonoBehaviour
         SceneManager.LoadScene("Level2_cleaned");
         Time.timeScale = 1;
     }
-
-
+     IEnumerator transition()
+    {
+        SceneManager.LoadScene("transition");
+        yield return new WaitForSeconds(7);
+    }
 }
