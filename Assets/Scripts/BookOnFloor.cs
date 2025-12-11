@@ -24,11 +24,13 @@ public class BookOnFloor : MonoBehaviour
             if (bookUI.IsOpen)
             {
                 Debug.Log("Closing book from " + gameObject.name);
+                Time.timeScale = 1;
                 bookUI.HideBook();
             }
             // if it's closed, open it with this book's data
             else
             {
+                Time.timeScale = 0;
                 Debug.Log("Opening book from " + gameObject.name);
                 bookUI.ShowBook(bookSprite, storyText);
             }
