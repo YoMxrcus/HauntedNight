@@ -15,11 +15,7 @@ public class scrRegularDoor : MonoBehaviour
     // Use Awake or Start to initialize things if you must use Find, but Inspector is better
     void Start()
     {
-        
-        inventoryPan = GameObject.Find("InventoryPan");
-        keyPNG = GameObject.Find("keyPNG");
-        keyPlayer = GameObject.Find("KeyPlayer");
-        if (GameObject.Find("KeyPlayer"))
+        if (keyPlayer != null)
         { hasKey = true;}
     }
     void OnTriggerEnter(Collider other)
