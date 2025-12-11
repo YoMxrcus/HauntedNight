@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlMenu: {fileID: 1493993460}
   infoMenu: {fileID: 190661994}
+  creditsMenu: {fileID: 813380221}
 --- !u!1 &184141650
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,7 +837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &559436366
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1376,7 +1377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &910876207
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2851,8 +2852,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7, y: 0.3}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -2.7373798, y: 0.5376624}
+  m_SizeDelta: {x: 86.70691, y: 87.55176}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1767263449
 MonoBehaviour:
@@ -2874,7 +2875,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'art designers:Freddy,Jaiden
+  m_text: 'art designers:Freddy,Jaden
 
 
     coder:Marcus
@@ -2949,7 +2950,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 56.300854, y: -17.943773, z: 56.521633, w: -17.128145}
+  m_margin: {x: -0.010193117, y: 0.11910821, z: -0.5900535, w: -0.015958816}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3001,7 +3002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -659, y: -37}
+  m_AnchoredPosition: {x: -659, y: -40}
   m_SizeDelta: {x: 438.8914, y: 203.9378}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1801246180
@@ -3050,7 +3051,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 116460673}
         m_TargetAssemblyTypeName: scrHelp, Assembly-CSharp
-        m_MethodName: InfoBtn
+        m_MethodName: CreditsBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3268,8 +3269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.7000062, y: 0.3000016}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -0.83263, y: 0.06233}
+  m_SizeDelta: {x: 86.70691, y: 87.55176}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841026244
 MonoBehaviour:
@@ -3291,7 +3292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'art designers:Freddy,Jaiden
+  m_text: 'art designers:Freddy,Jaden
 
 
     coder:Marcus
@@ -3366,7 +3367,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 56.300854, y: -17.943773, z: 56.521633, w: -17.128145}
+  m_margin: {x: -0.27707672, y: 0.11910821, z: 0.21056366, w: -0.015958816}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
