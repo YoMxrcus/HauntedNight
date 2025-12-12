@@ -8,9 +8,12 @@ using Unity.VisualScripting;
 
 public class scrFlashlight : MonoBehaviour
 {
-    //Flashlight Variables
+    // Flashlight Variables
     public GameObject lightBulb;
     bool isOn;
+
+    // NEW: Depletion Rate (Units per second)
+    public float batteryDepletionRate = 1f;
 
     public AudioSource sound;
     public AudioClip flashlightSound;
@@ -28,25 +31,27 @@ public class scrFlashlight : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            // ... (Flashlight toggle and sound logic remains the same)
             sound.PlayOneShot(flashlightSound);
-            if (isOn)
-            {
-                lightBulb.SetActive(false);
-                isOn = false;
-            }
-            else
-            {
-                lightBulb.SetActive(true);
-                isOn = true;
-            }
+            isOn = !isOn; // Simplified toggle
+            lightBulb.SetActive(isOn);
         }
+
+        // Only run depletion logic if the flashlight is on
         if (isOn)
         {
-            player.batteryAmount -= 0.005f;
+            // **THE FIX:** Multiply the depletion rate by Time.deltaTime
+            player.batteryAmount -= batteryDepletionRate * Time.deltaTime;
+
+            // Ensure battery doesn't go negative
+            player.batteryAmount = Mathf.Max(player.batteryAmount, 0f);
+
             if (UIManager.Instance != null)
             {
                 UIManager.Instance.UpdateFlashlightBattery(player.batteryAmount);
             }
+
+            // Turn off if battery hits zero
             if (player.batteryAmount <= 0)
             {
                 lightBulb.SetActive(false);

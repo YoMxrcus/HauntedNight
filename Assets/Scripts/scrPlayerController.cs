@@ -46,7 +46,8 @@ public class scrPlayerController : MonoBehaviour
     // Battery
     public float batteryAmount = 100;
 
-
+    public float sprintDepletionRate; // Deplete n units per second
+    public float staminaRegenRate;    // Regenerate n units per second
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,33 +59,54 @@ public class scrPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) & stamina > 0)
+        // --- 1. SPRINTING LOGIC (Depletion)
+        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0)
         {
             GetComponent<scrPlayerMovement>().speed = 6;
-            stamina -= 0.1f;
+
+            // **FIXED LINE:** Depletion is now framerate-independent
+            stamina -= sprintDepletionRate * Time.deltaTime;
+
+            UpdateData(); // Assuming this updates your UI/slider
+        }
+        // --- 2. REGENERATION LOGIC
+        else if (stamina < 100f)
+        {
+            // **FIXED LINE:** Regeneration is now framerate-independent
+            stamina += staminaRegenRate * Time.deltaTime;
+
+            // Clamp the stamina to make sure it doesn't go over 100
+            stamina = Mathf.Min(stamina, 100f);
+
             UpdateData();
         }
+
+        // --- 3. AUDIO LOGIC (Keep separate for clarity, but this part is fine)
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             sprint.clip = sprintSound;
             sprint.loop = true;
             sprint.Play();
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (Input.GetKeyUp(KeyCode.LeftShift) || stamina <= 0) // Added stamina check here
         {
             sprint.Stop();
             GetComponent<scrPlayerMovement>().speed = 3;
-            UpdateData();
+            UpdateData(); // Only needs to update data if speed/sprint state changes
         }
-        else if (stamina < 100f)
+
+        // --- 4. Sprint Stop Condition (Simplified/Moved)
+        if (stamina <= 0) // Changed from < 5 to <= 0 to prevent issues, or keep your < 5 if you prefer a buffer
         {
-            stamina += 0.05f;
-            UpdateData();
-        }
-        if (stamina < 5)
-        {
+            // Force stop if out of stamina
+            // This handles stopping the speed and the sound if stamina hits zero while key is held
+            GetComponent<scrPlayerMovement>().speed = 3;
             sprint.Stop();
         }
+
+        // Make sure stamina is never negative
+        stamina = Mathf.Max(stamina, 0f);
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             inventoryPAN.SetActive(true);

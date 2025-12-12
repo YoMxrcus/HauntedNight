@@ -27274,6 +27274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightBulb: {fileID: 893172278}
+  batteryDepletionRate: 1
   sound: {fileID: 336035069}
   flashlightSound: {fileID: 8300000, guid: 37207e7e87b13964aaca5d2a215afdad, type: 3}
   player: {fileID: 1267565867}
@@ -128361,6 +128362,8 @@ MonoBehaviour:
   flashlightPlayer: {fileID: 336035068}
   keyPlayer: {fileID: 307191672}
   batteryAmount: 100
+  sprintDepletionRate: 10
+  staminaRegenRate: 10
 --- !u!4 &1267565868
 Transform:
   m_ObjectHideFlags: 0
@@ -141184,9 +141187,9 @@ MonoBehaviour:
 
 
     The air in there is thick, heavy. Almost like
-    its poisionous. Something is moving inside those stone walls, something that
-    doesn''t belong to this world. I''ve heard the stories: the darkness, the things
-    that are within it... I can''t imagine what kind of monsters this place has.
+    its poisonous. Something is moving inside those stone walls, something that doesn''t
+    belong to this world. I''ve heard the stories: the darkness, the things that
+    are within it... I can''t imagine what kind of monsters this place has.
 
 
     I
