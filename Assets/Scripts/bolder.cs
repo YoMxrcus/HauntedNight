@@ -11,9 +11,9 @@ public class BoulderController : MonoBehaviour
     private bool playerInRange = false;
 
 
-    public float rollForce = 300f;     // Initial push downhill
-    public float chaseForce = 15f;     // Force applied toward player
-    public float maxSpeed = 20f;       // Cap speed
+    public float rollForce = 150;     // Initial push downhill
+    public float chaseForce = 10;     // Force applied toward player
+    public float maxSpeed = 10f;       // Cap speed
 
     public string wallTag = "BreakableWall"; // Tag for the specific wall
     public string playerTag = "Player";      // Tag for player object
