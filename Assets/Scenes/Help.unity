@@ -329,9 +329,9 @@ RectTransform:
   m_LocalScale: {x: 1.0341778, y: 1.0724806, z: 1.0088}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1801246179}
   - {fileID: 910876207}
   - {fileID: 559436366}
-  - {fileID: 1801246179}
   - {fileID: 184141651}
   m_Father: {fileID: 727805399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1172,8 +1172,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter the tample looking for a key in the maze while avoiding zombies,
-    ghost's and other traps to get to the end of the maze
+  m_text: Your objective is to escape the abandoned temple by avoiding enemies such
+    as zombies and ghosts, and using power-ups like batteries and hearts to your
+    advantage. Use the keys to open doors and reclaim your freedom.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
   m_sharedMaterial: {fileID: 6367951036065320985, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
@@ -1596,8 +1597,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter the tample looking for a key in the maze while avoiding zombies,
-    ghost's and other traps to get to the end of the maze
+  m_text: Your objective is to escape the abandoned temple by avoiding enemies such
+    as zombies and ghosts, and using power-ups like batteries and hearts to your
+    advantage. Use the keys to open doors and reclaim your freedom.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
   m_sharedMaterial: {fileID: 6367951036065320985, guid: 598633adb3a2bbe478dac1e4ee8e6239, type: 2}
@@ -2918,15 +2920,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'art designers:Freddy,Jaden
+  m_text: 'Designers:
+
+    Freddy & Jaden
 
 
-    coder:Marcus
+    Programmer: Marcus
 
 
-    Level Design:Jhoxua,
+    Level Design:
+
+    Jhoxua,
     Freddy
 
+
+    Audio: Jaden & Marcus
 
 '
   m_isRightToLeft: 0
@@ -3335,15 +3343,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'art designers:Freddy,Jaden
+  m_text: 'Designers:
+
+    Freddy & Jaden
 
 
-    coder:Marcus
+    Programmer: Marcus
 
 
-    Level Design:Jhoxua,
+    Level Design:
+
+    Jhoxua,
     Freddy
 
+
+    Audio: Jaden & Marcus
 
 '
   m_isRightToLeft: 0
