@@ -11242,7 +11242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8447132632761556798, guid: 4925698d1e9ff4448b5f8162006f0c51, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 99.158
+      value: 91.3
       objectReference: {fileID: 0}
     - target: {fileID: 8447132632761556798, guid: 4925698d1e9ff4448b5f8162006f0c51, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11250,7 +11250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8447132632761556798, guid: 4925698d1e9ff4448b5f8162006f0c51, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -111.456
+      value: -113.21
       objectReference: {fileID: 0}
     - target: {fileID: 8447132632761556798, guid: 4925698d1e9ff4448b5f8162006f0c51, type: 3}
       propertyPath: m_LocalRotation.w
@@ -64714,9 +64714,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 606025425}
   detectionRange: 50.7
-  rollForce: 500
-  chaseForce: 15
-  maxSpeed: 20
+  rollForce: 250
+  chaseForce: 10
+  maxSpeed: 10
   wallTag: BreakableWall
   playerTag: Player
 --- !u!54 &488480710
@@ -160035,9 +160035,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 606025425}
   detectionRange: 50.7
-  rollForce: 500
-  chaseForce: 15
-  maxSpeed: 20
+  rollForce: 250
+  chaseForce: 10
+  maxSpeed: 10
   wallTag: BreakableWall
   playerTag: Player
 --- !u!54 &1212612938
@@ -295829,9 +295829,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 606025425}
   detectionRange: 50.7
-  rollForce: 500
-  chaseForce: 15
-  maxSpeed: 20
+  rollForce: 250
+  chaseForce: 10
+  maxSpeed: 10
   wallTag: BreakableWall
   playerTag: Player
 --- !u!54 &2111314678
